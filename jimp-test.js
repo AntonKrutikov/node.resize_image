@@ -1,8 +1,8 @@
 var Jimp = require('jimp');
  
-Jimp.read('lion.jpeg', (err, lenna) => {
+Jimp.read('lion.jpeg', (err, img) => {
   if (err) throw err;
-  lenna
+  img
     .scaleToFit(900, 900)
     .quality(60)
     .write('out-jimp.jpg');
